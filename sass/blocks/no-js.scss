@@ -1,0 +1,116 @@
+// main-header
+
+@media (max-width: $desktop-width - 1px) {
+
+  .no-js .main-header__background {
+    padding-top: 0;
+  }
+
+  .no-js .main-header {
+    position: static;
+    background-color: $bg-accent-color;
+  }
+
+  .no-js .main-header__wrapper {
+    display: block;
+  }
+
+  .no-js .menu {
+    position: static;
+    transform: translateY(0);
+
+    width: 100%;
+    height: auto;
+    padding: 50px 15px;
+  }
+
+  .no-js .menu__toggle {
+    display: none;
+  }
+
+
+  @media (min-width: $tablet-width) {
+
+    .no-js .main-nav__site {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+
+    .no-js .main-nav__site li {
+      margin-bottom: 0;
+    }
+
+    .no-js .main-header__contacts {
+      display: flex;
+      align-items: center;
+    }
+
+    .no-js .contacts__tel {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .no-js .main-header__background {
+    padding-top: 0;
+  }
+
+  .no-js .main-header {
+    position: static;
+  }
+}
+
+
+
+// Services slider
+
+.no-js .services-slider__item:not(:first-of-type) {
+  display: none;
+}
+
+
+
+// faq
+
+.no-js .faq__item {
+  cursor: auto;
+
+  &::after {
+    display: none;
+  }
+}
+
+.no-js .faq__subtitle {
+  margin-left: 0;
+}
+
+.no-js .faq__info {
+  display: block;
+}
+
+
+
+// Review section
+
+.no-js .review__list {
+
+  &::before,
+  &::after {
+    width: 0;
+    height: 0;
+    background: unset;
+  }
+}
+
+
+
+// Contacts close btn
+
+.no-js .contacts-block__close {
+  display: none;
+}

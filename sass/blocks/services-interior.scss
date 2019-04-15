@@ -1,0 +1,180 @@
+.services-interior__wrapper {
+  padding-top: 72px;
+
+  background-color: #ffffff;
+}
+
+.services-interior {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 45px;
+    bottom: 55px;
+    z-index: -1;
+
+    width: 558px;
+    height: 353px;
+
+    background-image: url("../img/services-tulips-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 558px auto;
+  }
+}
+
+@media (min-resolution: $retina-dppx) {
+
+  .services-interior::before {
+    background-image: url("../img/services-tulips-mobile@2x.png");
+  }
+}
+
+.services-interior__subtitle {
+  position: relative;
+  margin-bottom: 37px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    z-index: -1;
+
+    width: 145px;
+    height: 171px;
+
+    background-image: url("../img/services-interior.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.services-interior p {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.services-interior button {
+  margin-bottom: 250px;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .services-interior__wrapper {
+    padding-top: 65px;
+  }
+
+  .services-interior {
+
+    &::before {
+      left: 230px;
+      bottom: 60px;
+
+      width: 1016px;
+      height: 639px;
+      background-image: url("../img/services-tulips-tablet@1x.png");
+      background-size: 1016px auto;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -70px;
+      z-index: 1;
+
+      width: 2px;
+      height: 84px;
+      box-shadow: -10px -50px 0 0 $bg-accent-color;
+
+      background-color: $bg-accent-color;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+
+    .services-interior::before {
+      background-image: url("../img/services-tulips-tablet@2x.png");
+    }
+  }
+
+  .services-interior__subtitle {
+    width: 410px;
+    margin-bottom: 60px;
+  }
+
+  .services-interior p {
+    width: 555px;
+    margin-bottom: 45px;
+  }
+
+  .services-interior button {
+    margin-bottom: 400px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .services-interior__wrapper {
+    padding-top: 125px;
+  }
+
+  .services-interior {
+    width: 555px;
+    padding-left: 600px;
+
+    &::before {
+      left: -255px;
+      bottom: 105px;
+
+      width: 1276px;
+      height: 813px;
+
+      background-image: url("../img/services-tulips-desktop@1x.png");
+      background-size: 1276px auto;
+    }
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+
+      box-shadow: 10px 50px 0 0 $bg-accent-color;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+
+    .services-interior::before {
+      background-image: url("../img/services-tulips-desktop@2x.png");
+    }
+  }
+
+  .services-interior__subtitle {
+    margin-bottom: 50px;
+
+    &::before {
+      top: -55px;
+      transform: translateY(0);
+      left: -90px;
+    }
+  }
+
+  .services-interior p {
+    width: 550px;
+    margin-bottom: 55px;
+  }
+
+  .services-interior button {
+    margin-bottom: 570px;
+  }
+}

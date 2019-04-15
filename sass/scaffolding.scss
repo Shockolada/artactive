@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-italic.woff2") format("woff2"),
+    url("../fonts/opensans-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-semibold.woff2") format("woff2"),
+    url("../fonts/opensans-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-bold.woff2") format("woff2"),
+    url("fonts/opensans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sans";
+  src: url("../fonts/opensans-extrabold.woff2") format("woff2"),
+    url("../fonts/opensans-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "muller";
+  src: url("../fonts/accent-font-medium.woff2") format("woff2"),
+    url("../fonts/accent-font-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "muller";
+  src: url("../fonts/accent-font-bold.woff2") format("woff2"),
+    url("../fonts/accent-font-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "muller";
+  src: url("../fonts/accent-font-extrabold.woff2") format("woff2"),
+    url("../fonts/accent-font-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $font-main;
+  font-weight: 400;
+
+  color: $text-main-color;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -10;
+
+    width: 1px;
+    height: 100%;
+    background-color: $lines-color;
+    box-shadow: 105px 0 0 0 $lines-color,
+      -105px 0 0 0 $lines-color,
+      210px 0 0 0 $lines-color,
+      -210px 0 0 0 $lines-color;
+  }
+
+  // // temporally
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 320px;
+  //   min-height: 6300px;
+  //   background-image: url("../Template/ArtActive320.jpg");
+
+  //   background-repeat: no-repeat;
+  //   background-position: top center;
+  //   opacity: 0.3;
+  //   z-index: -100;
+  // }
+  // //
+}
+
+
+@media (min-width: $tablet-width) {
+
+  body {
+
+    &::before {
+      box-shadow: 187px 0 0 0 $lines-color,
+        -187px 0 0 0 $lines-color,
+        374px 0 0 0 $lines-color,
+        -374px 0 0 0 $lines-color;
+    }
+
+    // // temporally
+    // &::after {
+    //   width: 750px;
+    //   min-height: 6000px;
+    //   background-image: url("../Template/ArtActive750.jpg");
+    //   // background-image: url("../Template/ArtActive750-menu.jpg");
+    // }
+    //
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  body {
+
+    &::before {
+      box-shadow: 292px 0 0 0 $lines-color,
+        -292px 0 0 0 $lines-color,
+        584px 0 0 0 $lines-color,
+        -584px 0 0 0 $lines-color;
+    }
+
+    // // temporally
+    // &::after {
+    //   width: 1170px;
+    //   min-height: 6000px;
+    //   background-image: url("../Template/ArtActive1170.jpg");
+    // }
+    // //
+  }
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}

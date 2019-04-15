@@ -1,0 +1,141 @@
+.consultation-invert {
+  border: 1px solid $bg-accent-color;
+
+  padding: 0 23px;
+  padding-top: 40px;
+  padding-bottom: 55px;
+  border-radius: 10px;
+
+  box-shadow: 0 23px 32px 0 $shadow-color;
+
+  background-color: $bg-accent-color;
+  background-image: url("../img/form-background-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 158px 147px;
+  background-position: 150% -45px;
+}
+
+@media (min-resolution: $retina-dppx) {
+
+  .consultation-invert {
+    background-image: url("../img/form-background-mobile@2x.png");
+  }
+}
+
+.consultation-invert__hint {
+  font-size: 16px;
+  font-style: italic;
+  color: $text-white-color;
+}
+
+.consultation-invert__title {
+  margin-bottom: 28px;
+  color: $text-white-color;
+}
+
+.consultation-invert input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 22px;
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+
+  font-weight: 700;
+  color: $text-white-color;
+  background-color: transparent;
+}
+
+.consultation-invert input:last-of-type {
+  margin-bottom: 40px;
+}
+
+.consultation-invert input::placeholder {
+  font-weight: 400;
+  font-style: italic;
+  color: $text-white-color;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .consultation-invert {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0 35px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+
+    background-image: url("../img/form-background-tablet@1x.png");
+    background-size: 241px 219px;
+    background-position: 510px -65px;
+  }
+
+  @media (min-resolution: $retina-dppx) {
+
+    .consultation-invert {
+      background-image: url("../img/form-background-tablet@2x.png");
+    }
+  }
+
+  .consultation-invert__hint {
+    width: 100%;
+  }
+
+  .consultation-invert__title {
+    width: 100%;
+  }
+
+  .consultation-invert__input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .consultation-invert input {
+    width: 180px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+
+  .consultation-invert input:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .consultation-invert button {
+    min-width: 195px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .consultation-invert {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    padding-left: 310px;
+    padding-right: 68px;
+
+    background: url("../img/form-background-tablet@1x.png") no-repeat 30px center,
+      url("../img/consultation-invert-bg@1x.jpg") no-repeat right bottom $bg-accent-color;
+  }
+
+  @media (min-resolution: $retina-dppx) {
+
+    .consultation-invert {
+      background: url("../img/form-background-tablet@2x.png") no-repeat 30px center,
+        url("../img/consultation-invert-bg@2x.jpg") no-repeat right bottom $bg-accent-color;
+      background-size: 241px 219px, 1140px 232px;
+    }
+  }
+
+  .consultation-invert input {
+    width: 242px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+}

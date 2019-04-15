@@ -1,0 +1,68 @@
+.contacts__tel {
+  display: block;
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #333333;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.contacts__button {
+  padding: 5px 20px;
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $btn-color;
+  border: 2px solid $btn-color;
+  border-radius: 20px;
+  background: transparent;
+  letter-spacing: 0.05em;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 1px $btn-color;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 $btn-color;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 340px;
+  }
+
+  .contacts__tel {
+    margin: 0;
+    color: $text-white-color;
+  }
+
+  .contacts__button {
+    padding: 5px 23px;
+
+    color: $text-white-color;
+    border: 2px solid #ffffff;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px #ffffff;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 0 #ffffff;
+    }
+  }
+}

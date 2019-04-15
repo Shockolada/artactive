@@ -1,0 +1,179 @@
+.services-outdoor {
+  margin-bottom: 72px;
+}
+
+.services-outdoor__subtitle {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 42px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    z-index: -1;
+
+    width: 95px;
+    height: 137px;
+
+    background-image: url("../img/services-outdoor.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.services-outdoor__list {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+
+  list-style: none;
+  text-transform: lowercase;
+}
+
+.services-outdoor__list li {
+  position: relative;
+  text-indent: 10px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+
+    width: 3px;
+    height: 3px;
+    background-color: $text-main-color;
+  }
+}
+
+.services-outdoor__order {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 40px;
+  padding: 30px 23px;
+  border-radius: 10px;
+  box-shadow: 0 23px 32px 0 $shadow-color;
+
+  background-color: $bg-accent-color;
+}
+
+.services-outdoor__hint {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-outdoor__hint i {
+  width: 100%;
+  margin-bottom: 3px;
+
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: $text-white-color;
+}
+
+.services-outdoor__hint span {
+  width: 100%;
+  margin-bottom: 25px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: $text-white-color;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .services-outdoor {
+    margin-bottom: 65px;
+  }
+
+  .services-outdoor__subtitle {
+    margin-bottom: 60px;
+
+    &::after {
+      top: -45px;
+      transform: translateY(0);
+    }
+  }
+
+  .services-outdoor__list {
+    margin-bottom: 42px;
+  }
+
+  .services-outdoor__order {
+    justify-content: space-between;
+    margin-top: 48px;
+    padding: 32px;
+  }
+
+  .services-outdoor__hint {
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+  }
+
+  .services-outdoor__hint i {
+    width: 92px;
+    margin-bottom: 0;
+  }
+
+  .services-outdoor__hint span {
+    width: 200px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .services-outdoor {
+    position: relative;
+
+    margin-bottom: 185px;
+  }
+
+  .services-outdoor__subtitle {
+    width: 475px;
+    margin-bottom: 48px;
+
+    &::after {
+      left: -80px;
+    }
+  }
+
+  .services-outdoor__list {
+    width: 475px;
+    margin-bottom: 75px;
+  }
+
+  .services-outdoor__slider {
+    position: absolute;
+    top: -30px;
+    right: 0;
+  }
+
+  .services-outdoor__order {
+    width: 475px;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 32px 35px;
+  }
+
+  .services-outdoor__hint {
+    width: 205px;
+  }
+
+  .services-outdoor__button {
+    min-width: 170px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

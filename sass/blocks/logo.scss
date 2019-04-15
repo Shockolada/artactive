@@ -1,0 +1,12 @@
+.logo {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+
+  &::selection {
+    background: transparent;
+  }
+}

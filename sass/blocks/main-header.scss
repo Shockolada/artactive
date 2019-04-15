@@ -1,0 +1,157 @@
+.main-header__background {
+  width: 100%;
+  min-height: 780px;
+  margin-bottom: 30px;
+  padding-top: 50px;
+
+  background-color: $bg-accent-color;
+  background-image: url("../img/background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+@media (min-resolution: $retina-dppx) {
+
+  .main-header__backgroung {
+    background-image: url("../img/background-mobile@2x.jpg");
+  }
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  width: 100%;
+  padding: 18px 0;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header--scroll {
+  padding: 5px 0;
+
+  background-color: $bg-accent-color;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .main-header__background {
+    position: relative;
+
+    min-height: 540px;
+    margin-bottom: 45px;
+    padding-top: 60px;
+
+    background-image: url("../img/background-tablet@1x.jpg");
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      bottom: 40px;
+
+      width: 15px;
+      height: 27px;
+      border: 2px solid #ffffff;
+      border-radius: 15px;
+    }
+
+    &::after {
+      bottom: 59px;
+
+      width: 1px;
+      height: 5px;
+
+      background-color: #ffffff;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+
+    .main-header__backgroung {
+      background-image: url("../img/background-tablet@2x.jpg");
+    }
+  }
+
+  .main-header {
+    padding: 22px 0;
+  }
+
+  .main-header--scroll {
+    padding: 10px 0;
+  }
+
+  // Menu paddings when scroll
+  .main-header--scroll .main-nav__site {
+    padding-top: 10px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .main-header__background {
+    min-height: 758px;
+    margin-bottom: 104px;
+    padding-top: 182px;
+    background-image: url("../img/background-desktop@1x.jpg");
+
+    &::before {
+      bottom: 68px;
+    }
+
+    &::after {
+      bottom: 87px;
+    }
+  }
+
+  @media (min-resolution: $retina-dppx) {
+
+    .main-header__backgroung {
+      background-image: url("../img/background-desktop@2x.jpg");
+    }
+  }
+
+  .main-header__wrapper {
+    justify-content: flex-start;
+  }
+
+  .main-header {
+    padding-top: 62px;
+    padding-bottom: 0;
+  }
+
+  .main-header--scroll {
+    padding: 20px 0;
+  }
+
+  // Menu paddings when scroll
+  .main-header--scroll .main-nav__site {
+    padding-top: 0;
+  }
+
+  .main-header__logo {
+    margin-top: -4px;
+    margin-right: auto;
+  }
+
+  .main-header__contacts {
+    margin-left: 75px;
+  }
+}

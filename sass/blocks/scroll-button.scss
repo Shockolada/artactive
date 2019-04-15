@@ -1,0 +1,53 @@
+.scroll-button {
+  position: fixed;
+  right: 15px;
+  bottom: 70px;
+  z-index: 7;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  width: 35px;
+  height: 35px;
+  background-color: $bg-accent-color;
+  border: 0;
+  border-radius: 50%;
+
+  background-image: url("../img/svg/icon-arrow-top.svg");
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-size: 20px auto;
+  outline: none;
+  display: none;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-color;
+  }
+
+  &:active {
+    background-size: 18px auto;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .scroll-button {
+    width: 50px;
+    height: 50px;
+    background-size: 25px auto;
+
+    &:active {
+      background-size: 22px auto;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .scroll-button {
+    bottom: 100px;
+    right: 30px;
+  }
+}

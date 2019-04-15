@@ -1,0 +1,53 @@
+.slick-prev,
+.slick-next {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+
+  display: block;
+  width: 91px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+
+  font-size: 0;
+  line-height: 0;
+
+  color: transparent;
+  border: none;
+  /* outline: none; */
+  background: transparent;
+  background-image: url("../img/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+}
+
+.slick-prev {
+  left: 80px;
+  transform: rotate(180deg);
+}
+
+.slick-next {
+  right: 80px;
+}
+
+
+@media (min-width: $tablet-width) {
+
+  .slick-prev {
+    left: 50px;
+  }
+
+  .slick-next {
+    right: unset;
+    left: 175px;
+  }
+}

@@ -1,0 +1,61 @@
+@media (max-width: $desktop-width - 1px) {
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+
+    width: 100vw;
+    height: 100vh;
+    padding-left: 70px;
+    padding-right: 15px;
+
+    padding-top: 50px;
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+
+    transform: translateY(-100%);
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu--opened {
+    transform: translateY(0);
+  }
+
+  .menu__toggle {
+    position: relative;
+    z-index: 9;
+  }
+
+
+  @media (min-width: $tablet-width) {
+
+    .menu {
+      left: auto;
+      right: 0;
+      width: 300px;
+
+      transform: translateY(0) translateX(100%);
+    }
+
+    .menu--opened {
+      transform: translateX(0);
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu__toggle {
+    display: none;
+  }
+}
